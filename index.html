@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Madhura Pradeep Mirajakar — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- FLOATING PARTICLES -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-icon"><i class="fas fa-brain"></i></span>
+      <span class="logo-text">Madhura<span class="logo-dot">.dev</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+        <span class="theme-icon light-icon"><i class="fas fa-moon"></i></span>
+        <span class="theme-icon dark-icon"><i class="fas fa-sun"></i></span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge animate-up" style="--delay:0.05s">
+          <span class="badge-dot"></span> Open to Opportunities
+        </div>
+        <p class="hero-greeting animate-up" style="--delay:0.1s">Hello, I'm</p>
+        <h1 class="hero-name animate-up" style="--delay:0.2s">
+          Madhura <span class="name-accent">Pradeep</span><br/>
+          <span class="name-last">Mirajakar</span>
+        </h1>
+        <div class="hero-roles animate-up" style="--delay:0.35s">
+          <span class="role-pill"><i class="fas fa-laptop-code"></i> Software Developer</span>
+          <span class="role-pill"><i class="fas fa-robot"></i> AI/ML Engineer</span>
+          <span class="role-pill"><i class="fas fa-layer-group"></i> Full Stack</span>
+          <span class="role-pill"><i class="fas fa-lightbulb"></i> Problem Solver</span>
+        </div>
+        <p class="hero-subtitle animate-up" style="--delay:0.45s">
+          Building <em>intelligent systems</em> that solve real-world challenges — from mental wellness AI to fraud detection and civic technology.
+        </p>
+        <div class="hero-cta animate-up" style="--delay:0.55s">
+          <a href="#projects" class="btn btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+          <a href="assets/Madhura_Resume.pdf" download class="btn btn-ghost"><i class="fas fa-file-arrow-down"></i> Resume</a>
+        </div>
+      </div>
+      <div class="hero-photo animate-up" style="--delay:0.3s">
+        <div class="photo-orbit orbit-1"><div class="orbit-dot"></div></div>
+        <div class="photo-orbit orbit-2"><div class="orbit-dot"></div></div>
+        <div class="photo-frame">
+          <img src="assets/photo.jpeg" alt="Madhura Pradeep Mirajakar" class="profile-photo" id="profilePhoto"
+               onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex'"/>
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <i class="fas fa-user"></i>
+            <span>Add photo.jpg<br/>to assets/</span>
+          </div>
+        </div>
+        <div class="photo-badge badge-tl"><i class="fas fa-robot"></i> AI/ML</div>
+        <div class="photo-badge badge-br"><i class="fas fa-code"></i> Dev</div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint">
+      <span>Scroll</span><i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Engineering the Future<br/><span>with Intelligent Systems</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong>Madhura Pradeep Mirajakar</strong>, a passionate Computer Science student with a deep focus on Artificial Intelligence and Machine Learning. I turn complex, real-world problems into elegant data-driven solutions.</p>
+          <p>From deploying real-time <em>physiological stress monitoring</em> with IoT sensors and Firebase, to building NLP-powered fraud detection pipelines — I thrive at the crossroads of AI research and practical engineering.</p>
+          <p>My philosophy: <em>build things that matter, ship things that work.</em></p>
+          <div class="about-stats">
+            <div class="stat-item reveal">
+              <span class="stat-number count-up" data-target="4">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item reveal">
+              <span class="stat-number">ML</span>
+              <span class="stat-label">Core Domain</span>
+            </div>
+            <div class="stat-item reveal">
+              <span class="stat-number">IoT</span>
+              <span class="stat-label">Hardware</span>
+            </div>
+            <div class="stat-item reveal">
+              <span class="stat-number">Full</span>
+              <span class="stat-label">Stack Dev</span>
+            </div>
+          </div>
+          <a href="assets/Madhura_Resume.pdf" download class="btn btn-accent-outline reveal">
+            <i class="fas fa-file-pdf"></i> Download Resume (PDF)
+          </a>
+        </div>
+
+        <div class="about-cards-col">
+          <div class="info-card reveal">
+            <div class="card-header">
+              <i class="fas fa-graduation-cap"></i>
+              <h3>Education</h3>
+            </div>
+            <div class="edu-item">
+              <div class="edu-logo">SGB</div>
+              <div class="edu-details">
+                <strong>B.E. — Computer Science &amp; Engineering</strong>
+                <span class="edu-college">S.G. Balekundri Institute of Technology</span>
+                <span class="edu-location"><i class="fas fa-map-marker-alt"></i> Belagavi, Karnataka</span>
+                <div class="edu-meta">
+                  <span class="edu-year"><i class="fas fa-calendar-alt"></i> 2023 – 2027</span>
+                  <span class="edu-badge">Pursuing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <div class="card-header">
+              <i class="fas fa-fire"></i>
+              <h3>Domains &amp; Interests</h3>
+            </div>
+            <div class="interest-tags">
+              <span><i class="fas fa-brain"></i> AI / ML</span>
+              <span><i class="fas fa-heartbeat"></i> HealthTech</span>
+              <span><i class="fas fa-shield-alt"></i> Fraud Detection</span>
+              <span><i class="fas fa-seedling"></i> AgriTech</span>
+              <span><i class="fas fa-vote-yea"></i> Civic Tech</span>
+              <span><i class="fas fa-microchip"></i> IoT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Skills</div>
+        <h2 class="section-title">My Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" style="--card-color:#6366f1; --card-color-rgb:99,102,241;">
+          <div class="skill-card-glow"></div>
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span>Python</span><span>JavaScript</span><span>PHP</span><span>SQL</span><span>HTML/CSS</span><span>C/C++</span><span>React.js</span><span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-color:#10b981; --card-color-rgb:16,185,129;">
+          <div class="skill-card-glow"></div>
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+            <h3>AI / ML Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span>Scikit-learn</span><span>TensorFlow</span><span>GaussianNB</span><span>LinearSVC</span><span>TF-IDF</span><span>Flask ML</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-color:#f59e0b; --card-color-rgb:245,158,11;">
+          <div class="skill-card-glow"></div>
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Frameworks &amp; Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span>Flask</span><span>Git</span><span>VS Code</span><span>Jupyter</span><span>Google Colab</span><span>NumPy</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-color:#ec4899; --card-color-rgb:236,72,153;">
+          <div class="skill-card-glow"></div>
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud &amp; Hardware</h3>
+          </div>
+          <div class="skill-tags">
+            <span>Firebase</span><span>ESP32</span><span>IoT Sensors</span><span>REST APIs</span><span>MySQL</span><span>NumLookup API</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-color:#14b8a6; --card-color-rgb:20,184,166;">
+          <div class="skill-card-glow"></div>
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <h3>Domains</h3>
+          </div>
+          <div class="skill-tags">
+            <span>Machine Learning</span><span>Software Development</span><span>NLP</span><span>Data Visualization</span><span>Full Stack</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-color:#8b5cf6; --card-color-rgb:139,92,246;">
+          <div class="skill-card-glow"></div>
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Security &amp; Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span>SQL Injection Prevention</span><span>Session Mgmt</span><span>Password Hashing</span><span>Python</span><span>PHP Backend</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">What I've Built</h2>
+        <p class="section-sub">Click a project title to reveal full details</p>
+      </div>
+      <div class="projects-list">
+
+        <div class="project-card reveal">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-row">
+              <span class="project-tag tag-teal">AI · Healthcare · IoT</span>
+              <span class="project-number">01</span>
+            </div>
+            <h3 class="project-title">DeepCalm <span class="project-sub">— AI-Based Stress Monitoring &amp; Therapy System</span></h3>
+            <p class="project-preview">Real-time physiological stress detection with personalized AI therapy via ESP32 + Firebase</p>
+            <div class="project-actions">
+              <a href="https://github.com/MadhuraMirajakar/DeepCalm" target="_blank" rel="noopener" class="github-link" onclick="event.stopPropagation()">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <button class="expand-btn"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-inner">
+              <p>DeepCalm is an AI-driven stress monitoring system that processes real-time physiological data using a Flask-based backend and ML model to predict stress levels. Sensor data collected via ESP32 is streamed to Firebase for cloud-based handling and real-time analysis.</p>
+              <p>The system dynamically delivers personalized therapy including breathing guidance and audio-based relaxation through an interactive web interface, with user-specific data storage and stress trend visualization.</p>
+              <div class="project-tech"><h4>Tech Stack</h4>
+                <div class="tech-pills"><span>Flask</span><span>Machine Learning</span><span>ESP32</span><span>Firebase</span><span>Python</span><span>JavaScript</span><span>IoT</span></div>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight"><i class="fas fa-check-circle"></i> Real-time physiological data processing</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> Personalized breathing &amp; audio therapy</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> Cloud-based stress trend visualization</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> Scalable AI + Cloud + Full-stack integration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-row">
+              <span class="project-tag tag-orange">ML · Cybersecurity · NLP</span>
+              <span class="project-number">02</span>
+            </div>
+            <h3 class="project-title">CogniCheck <span class="project-sub">— Online Fraud Detection System</span></h3>
+            <p class="project-preview">Detecting fake websites, fake news &amp; fraudulent phone numbers with ML &amp; NLP</p>
+            <div class="project-actions">
+              <a href="https://github.com/MadhuraMirajakar/CogniCheck" target="_blank" rel="noopener" class="github-link" onclick="event.stopPropagation()">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <button class="expand-btn"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-inner">
+              <p>CogniCheck is a web-based system enhancing online safety by detecting fake websites, identifying fake news, and validating mobile numbers. Uses GaussianNB for website detection and LinearSVC with TF-IDF for news classification.</p>
+              <p>Integrates the NumLookup API to verify phone numbers and provide details like country and carrier. Fast, accurate results through a clean UI to help users avoid phishing, misinformation, and fraudulent calls.</p>
+              <div class="project-tech"><h4>Tech Stack</h4>
+                <div class="tech-pills"><span>GaussianNB</span><span>LinearSVC</span><span>TF-IDF</span><span>NumLookup API</span><span>Python</span><span>Flask</span><span>NLP</span></div>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight"><i class="fas fa-check-circle"></i> Fake website detection using GaussianNB</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> News classification with LinearSVC + TF-IDF</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> Phone validation via NumLookup API</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> Unified anti-fraud dashboard UI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-row">
+              <span class="project-tag tag-purple">Web App · Security · Civic Tech</span>
+              <span class="project-number">03</span>
+            </div>
+            <h3 class="project-title">VoteSecure <span class="project-sub">— Online Voting System for College Students</span></h3>
+            <p class="project-preview">Secure, transparent digital elections with RBAC, SQL injection prevention &amp; real-time tallying</p>
+            <div class="project-actions">
+              <a href="https://github.com/MadhuraMirajakar/OnlineVotingSystem" target="_blank" rel="noopener" class="github-link" onclick="event.stopPropagation()">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <button class="expand-btn"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-inner">
+              <p>The Online Voting System enables secure and efficient digital elections within an academic environment. Uses authentication mechanisms, session management, and password hashing for secure user access, with role-based access control for admins and students.</p>
+              <p>Built with PHP and MySQL, incorporates prepared statements to prevent SQL injection, enforces one-user-one-vote policy, and maintains real-time vote tallying for full transparency.</p>
+              <div class="project-tech"><h4>Tech Stack</h4>
+                <div class="tech-pills"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span><span>Session Management</span><span>Password Hashing</span><span>RBAC</span></div>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight"><i class="fas fa-check-circle"></i> Role-based access for admins &amp; students</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> SQL injection prevention with prepared statements</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> One-user-one-vote enforcement</div>
+                <div class="highlight"><i class="fas fa-check-circle"></i> Real-time vote tallying &amp; results</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">Open to opportunities, collaborations, and AI/ML conversations</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:madhuramirajakar@gmail.com">
+          <div class="contact-icon" style="--cc:#ea4335"><i class="fas fa-envelope"></i></div>
+          <div class="contact-info"><span class="contact-label">Email</span><span class="contact-value">madhuramirajakar@gmail.com</span></div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a class="contact-card reveal" href="https://github.com/MadhuraMirajakar" target="_blank" rel="noopener">
+          <div class="contact-icon" style="--cc:#24292e"><i class="fab fa-github"></i></div>
+          <div class="contact-info"><span class="contact-label">GitHub</span><span class="contact-value">MadhuraMirajakar</span></div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a class="contact-card reveal" href="https://linkedin.com/in/madhura-mirajakar" target="_blank" rel="noopener">
+          <div class="contact-icon" style="--cc:#0077b5"><i class="fab fa-linkedin-in"></i></div>
+          <div class="contact-info"><span class="contact-label">LinkedIn</span><span class="contact-value">Madhura Mirajakar</span></div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a class="contact-card reveal" href="tel:+919342705500">
+          <div class="contact-icon" style="--cc:#25d366"><i class="fas fa-phone"></i></div>
+          <div class="contact-info"><span class="contact-label">Phone</span><span class="contact-value">+91 93427 05500</span></div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Madhura Pradeep Mirajakar</span>
+      <span class="footer-copy">Turning ideas into intelligent solutions <i class="fas fa-rocket" style="color:#f59e0b"></i></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
